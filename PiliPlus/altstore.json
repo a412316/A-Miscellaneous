@@ -1,10 +1,10 @@
 {
   "name": "PiliPlus",
-  "subtitle": "使用Flutter开发的BiliBili第三方客户端",
-  "description": "使用Flutter开发的BiliBili第三方客户端。",
-  "iconURL": "https://raw.githubusercontent.com/a412316/test/refs/heads/master/Piliplus/icon.png",
+  "subtitle": "Flutter 开发的 BiliBili 第三方客户端 · A 3rd-party BiliBili client built with Flutter",
+  "description": "基于 Flutter 开发的 BiliBili（哔哩哔哩）第三方跨平台客户端，是 pilipala / PiliPalaX 的延续分支，支持 iOS、Android 与桌面端：视频、番剧、直播与互动视频播放，弹幕与高级弹幕，离线缓存与 WebDAV 备份，收藏夹、观看记录、动态、私信、多账号，以及 DLNA 投屏、SponsorBlock、倍速与手势控制等丰富播放选项。\n\nAn unofficial cross-platform BiliBili client built with Flutter (a continuation of pilipala / PiliPalaX), available on iOS, Android and desktop: video, bangumi, live and interactive video playback; danmaku; offline caching & WebDAV backup; favorites, watch history, dynamics, messages, multi-account; DLNA casting, SponsorBlock and rich playback controls.",
+  "iconURL": "https://raw.githubusercontent.com/a412316/A-Miscellaneous/refs/heads/main/PiliPlus/icon.png",
   "website": "https://github.com/bggRGjQaUbCoE/PiliPlus",
-  "tintColor": "#21447C",
+  "tintColor": "#FB7299",
   "featuredApps": [
     "com.example.piliplus"
   ],
@@ -13,18 +13,18 @@
       "name": "PiliPlus",
       "bundleIdentifier": "com.example.piliplus",
       "developerName": "bggRGjQaUbCoE",
-      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
-      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端。",
+      "subtitle": "Flutter 开发的 BiliBili 第三方客户端 · A 3rd-party BiliBili client built with Flutter",
+      "localizedDescription": "基于 Flutter 的 BiliBili 第三方客户端：视频、番剧、直播与互动视频，弹幕、离线缓存、多账号与丰富播放选项。\n\nAn unofficial BiliBili client in Flutter: videos, bangumi, live and interactive videos, danmaku, offline caching, multi-account and rich playback options.",
       "iconURL": "https://raw.githubusercontent.com/a412316/A-Miscellaneous/refs/heads/main/PiliPlus/icon.png",
-      "tintColor": "#21447C",
-      "category": "developer",
+      "tintColor": "#FB7299",
+      "category": "photoVideo",
       "versions": [
         {
           "version": "2.1.6",
           "buildVersion": "5453",
           "marketingVersion": "2.1.6",
-          "date": "2026-10-06",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6+5453.ipa",
+          "date": "2026-10-05",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6%2B5453.ipa",
           "size": 24083344,
           "minOSVersion": "15.0"
         }

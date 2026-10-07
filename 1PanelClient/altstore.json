@@ -2,7 +2,7 @@
   "name": "1PanelClient",
   "subtitle": "1Panel 的 iOS 客户端 · iOS client for 1Panel",
   "description": "1Panel（开源 Linux 服务器运维管理面板）的非官方原生 iOS 客户端，Swift + SwiftUI 构建，通过 1Panel v2 OpenAPI 远程管理服务器：多服务器/多节点、应用商店、网站与 SSL 证书、数据库、Docker 容器与终端、计划任务、防火墙/WAF、监控告警等 19 个管理模块。\n\nAn unofficial native iOS client (Swift + SwiftUI) for 1Panel, the open-source Linux server management panel, talking to the 1Panel v2 OpenAPI.\n\n发布的 IPA 未签名，安装时由你的 Apple ID 重新签名（AltStore / SideStore / Sideloadly）。侧载版不含桌面小组件，其余功能一致。",
-  "iconURL": "https://raw.githubusercontent.com/xy2026yi/1PanelClient/main/docs/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/a412316/A-Miscellaneous/refs/heads/main/1PanelClient/icon.png",
   "website": "https://github.com/xy2026yi/1PanelClient",
   "tintColor": "#21447C",
   "featuredApps": [
@@ -24,7 +24,6 @@
           "buildVersion": "3",
           "marketingVersion": "0.2.1",
           "date": "2026-10-04",
-          "localizedDescription": "**Full Changelog**: https://github.com/xy2026yi/1PanelClient/compare/v0.2.0...v0.2.1",
           "downloadURL": "https://github.com/xy2026yi/1PanelClient/releases/download/v0.2.1/1PanelClient-v0.2.1.ipa",
           "size": 14237178,
           "minOSVersion": "26.5"
