@@ -15,7 +15,7 @@
       "developerName": "xy2026yi",
       "subtitle": "1Panel 的 iOS 客户端 · iOS client for 1Panel",
       "localizedDescription": "1Panel 的非官方原生 iOS 客户端：多服务器管理、应用商店、网站与 SSL 证书、数据库、Docker 容器与终端、计划任务、防火墙/WAF、监控告警。\n\nAn unofficial native iOS client for 1Panel — multi-server management, app store, websites & SSL certs, databases, Docker containers & terminal, cronjobs, firewall/WAF, monitoring & alerts.\n\nIPA 未签名，由你的 Apple ID 在安装时重签（AltStore / SideStore / Sideloadly）；侧载版不含桌面小组件。",
-      "iconURL": "https://raw.githubusercontent.com/xy2026yi/1PanelClient/main/docs/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/a412316/A-Miscellaneous/refs/heads/main/1PanelClient/icon.png",
       "tintColor": "#21447C",
       "category": "developer",
       "versions": [
