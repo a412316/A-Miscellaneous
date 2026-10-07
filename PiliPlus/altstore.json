@@ -1,0 +1,38 @@
+{
+  "name": "PiliPlus",
+  "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+  "description": "使用Flutter开发的BiliBili第三方客户端。",
+  "iconURL": "https://raw.githubusercontent.com/a412316/test/refs/heads/master/Piliplus/icon.png",
+  "website": "https://github.com/bggRGjQaUbCoE/PiliPlus",
+  "tintColor": "#21447C",
+  "featuredApps": [
+    "com.example.piliplus"
+  ],
+  "apps": [
+    {
+      "name": "PiliPlus",
+      "bundleIdentifier": "com.example.piliplus",
+      "developerName": "bggRGjQaUbCoE",
+      "subtitle": "使用Flutter开发的BiliBili第三方客户端",
+      "localizedDescription": "使用Flutter开发的BiliBili第三方客户端。",
+      "iconURL": "https://raw.githubusercontent.com/a412316/test/refs/heads/master/Piliplus/icon.png",
+      "tintColor": "#21447C",
+      "category": "developer",
+      "versions": [
+        {
+          "version": "2.1.6",
+          "buildVersion": "5453",
+          "marketingVersion": "2.1.6",
+          "date": "2026-10-06",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6+5453.ipa",
+          "size": 24083344,
+          "minOSVersion": "15.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      }
+    }
+  ]
+}
