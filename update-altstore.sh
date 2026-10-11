@@ -5,7 +5,10 @@
 # 流程:
 #   1. 调 GitHub API 查询各应用最新 Release,与 altstore.json 中已记录的版本对比;
 #   2. 有更新时下载 Release 中的 ipa,从 Payload/*.app/Info.plist 提取
-#      bundleIdentifier / marketingVersion / buildVersion / minOSVersion;
+#      bundleIdentifier / buildVersion / minOSVersion;
+#      版本号(version/marketingVersion)以上游 Release tag 为准——部分上游 tag
+#      是 4 段(如 2.1.6.2)而 ipa 内部版本只有 3 段(2.1.6),以 ipa 内部版本为准
+#      会导致版本号不前进、之后一直误判「无更新」;
 #   3. 新版本写入对应文件夹的 altstore.json(替换 versions 数组,仅保留最新一条,
 #      不写入 localizedDescription),最后统一 commit + push。
 #
@@ -112,8 +115,10 @@ main() {
         local_version="$(jq -r '.apps[0].versions[0].version // ""' "$json_file")"
         local_url="$(jq -r '.apps[0].versions[0].downloadURL // ""' "$json_file")"
 
-        # 版本号相同,或该 Release 的 ipa 已记录过 → 无更新
-        if [[ "$latest" == "$local_version" || "$ipa_url" == "$local_url" ]]; then
+        # 版本号与 ipa 链接「都」已记录 → 无更新。
+        # 不能用「或」:链接相同但版本号落后时(上游 tag 比已记录版本新,如
+        # 2.1.6.2 vs 2.1.6),必须重写版本号,否则会永远卡在旧版本、误报无更新。
+        if [[ "$latest" == "$local_version" && "$ipa_url" == "$local_url" ]]; then
             log "$folder: 已是最新版本 $local_version"
             continue
         fi
@@ -133,11 +138,19 @@ main() {
             failed=1
             continue
         fi
-        local new_ver new_build min_os bundle_id
-        new_ver="$(jq -r '.version' <<<"$info")"
+        local new_ver new_build min_os bundle_id ipa_ver
+        ipa_ver="$(jq -r '.version' <<<"$info")"
         new_build="$(jq -r '.buildVersion' <<<"$info")"
         min_os="$(jq -r '.minOSVersion' <<<"$info")"
         bundle_id="$(jq -r '.bundleIdentifier' <<<"$info")"
+
+        # 版本号以上游 Release tag 为准($latest):ipa 内部的
+        # CFBundleShortVersionString 可能落后于 tag(如 tag 2.1.6.2、ipa 内部
+        # 2.1.6),以 ipa 为准会让 AltStore 一直显示旧版本号、不再提示更新。
+        new_ver="$latest"
+        if [[ -n "$ipa_ver" && "$ipa_ver" != "$latest" ]]; then
+            log "提示: $folder 上游 tag 为 $latest,ipa 内部版本为 $ipa_ver,以 tag 为准"
+        fi
 
         if [[ -n "$bundle_id" && "$bundle_id" != "$(jq -r '.apps[0].bundleIdentifier // ""' "$json_file")" ]]; then
             log "警告: $folder 的 bundleIdentifier 与 ipa 不一致(ipa=$bundle_id),请人工确认"
