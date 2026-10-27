@@ -20,12 +20,12 @@
       "category": "developer",
       "versions": [
         {
-          "version": "0.2.6",
-          "buildVersion": "10",
-          "marketingVersion": "0.2.6",
-          "date": "2026-10-24",
-          "downloadURL": "https://github.com/xy2026yi/1PanelClient/releases/download/v0.2.6/1PanelClient-v0.2.6.ipa",
-          "size": 15418881,
+          "version": "0.2.7",
+          "buildVersion": "11",
+          "marketingVersion": "0.2.7",
+          "date": "2026-10-26",
+          "downloadURL": "https://github.com/xy2026yi/1PanelClient/releases/download/v0.2.7/1PanelClient-v0.2.7.ipa",
+          "size": 16005736,
           "minOSVersion": "26.5"
         }
       ],
