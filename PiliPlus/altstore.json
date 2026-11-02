@@ -20,12 +20,12 @@
       "category": "photoVideo",
       "versions": [
         {
-          "version": "2.1.6.2",
-          "buildVersion": "5472",
-          "marketingVersion": "2.1.6.2",
-          "date": "2026-10-10",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6.2/PiliPlus_ios_2.1.6%2B5472.ipa",
-          "size": 24353925,
+          "version": "2.2.0",
+          "buildVersion": "5580",
+          "marketingVersion": "2.2.0",
+          "date": "2026-11-01",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0/PiliPlus_ios_2.2.0%2B5580.ipa",
+          "size": 24921912,
           "minOSVersion": "15.0"
         }
       ],
